@@ -93,22 +93,11 @@ const personagens =
         esta_vivo: "True",
     }
 ]
-const personagensArquivo = require("./personagens.json")
-
-
-personagensArquivo.forEach((Personagem)=>{
-    console.log(Personagem.nome + 
-        " - classe: " + Personagem.classe + 
-        " - nivel: " + Personagem.nivel +
-        " - pontos de vida: " + Personagem.pontos_vida +
-        " - pontos de mana: " + Personagem.pontos_mana +
-        " - inventario: " + Personagem.inventario + 
-        " - esta vivo: " + Personagem.esta_vivo)
-})
-
 const personagensJSON = JSON.stringify(personagens)
-
+console.log(personagensJSON)
 
 const fs = require("fs")
 fs.writeFileSync("personagens.json",personagensJSON)
+
+const personagensArquivo = require("./personagens.json")
 
